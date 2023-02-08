@@ -1,4 +1,5 @@
-﻿using AtmLocator.Exchange;
+﻿using AtmLocator.Clients;
+using AtmLocator.Exchange;
 using AtmLocator.Model;
 
 namespace AtmLocator.Services.Impl;
@@ -35,11 +36,11 @@ public class DefaultAtmService : IATMService
 
     private async Task<ATM> GetBranch(ATMSearchResult res)
     {
-        var branch = await _branchClient.FindById(res.BranchId!.Value);
+        var branch = await _branchClient.FindByIdAsync(res.BranchId!.Value);
         return ResultToModel(res, branch);
     }
 
-    private ATM ResultToModel(ATMSearchResult atmRes, Branch? branch)
+    private ATM ResultToModel(ATMSearchResult atmRes, BranchModel? branch)
     {		
         var atmLoc = new Location(atmRes.Latitude, atmRes.Longitude);
 		

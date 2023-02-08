@@ -1,12 +1,23 @@
+using AtmLocator.Clients;
+using AtmLocator.Services;
+using AtmLocator.Services.Impl;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<IATMService, DefaultAtmService>();
+builder.Services.AddHttpClient<ILocTranslationService, DefaultLocTranslationService>(c =>
+{
+    c.BaseAddress = new Uri(builder.Configuration.GetValue<string>("services:location-transation"));
+});
 
+builder.Services.AddHttpClient<IBranchClient, BranchClient>(c =>
+{
+    c.BaseAddress = new Uri(builder.Configuration.GetValue<string>("services:branch"));
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

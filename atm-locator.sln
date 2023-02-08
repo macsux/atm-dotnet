@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtmLocator", "AtmLocator\AtmLocator.csproj", "{F06FB462-6813-45FA-9313-44212D394EA0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atm", "Atm\Atm.csproj", "{8F8EFC28-B97B-4FF4-A445-F2F24007A489}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocationTranslator", "LocationTranslator\LocationTranslator.csproj", "{567BC771-2642-4CB3-B3A5-E87CE47E3BEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtmLocator", "AtmLocator\AtmLocator.csproj", "{DA038CDE-CB5A-4663-8633-ABA4E6EEFF20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,5 +20,9 @@ Global
 		{567BC771-2642-4CB3-B3A5-E87CE47E3BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{567BC771-2642-4CB3-B3A5-E87CE47E3BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{567BC771-2642-4CB3-B3A5-E87CE47E3BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA038CDE-CB5A-4663-8633-ABA4E6EEFF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA038CDE-CB5A-4663-8633-ABA4E6EEFF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA038CDE-CB5A-4663-8633-ABA4E6EEFF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA038CDE-CB5A-4663-8633-ABA4E6EEFF20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
